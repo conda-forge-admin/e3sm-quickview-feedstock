@@ -37,11 +37,14 @@ requirements:
     - trame-dataclass >=2.0.2
     - trame-components
     - trame-tauri >=0.6.2
-    - trame-colormaps >=1.5.0
+    - trame-colormaps >=1.7.2
     - pillow
 
 tests:
   - python:
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
       imports:
         - e3sm_quickview
       pip_check: true
