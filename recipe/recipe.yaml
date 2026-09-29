@@ -1,15 +1,15 @@
 schema_version: 1
 
 context:
-  version: "2.10.0"
+  version: "2.10.1"
 
 package:
   name: e3sm-quickview
   version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/99/f3/7af1f9e568101cc226fb4948e8ce972f187d82816f1fd6c17c5f0c0ea0a1/e3sm_quickview-${{ version }}.tar.gz
-  sha256: 7e64396cdc5c2e8a72e09f41140f5d1956123a45e53a6f11a4354171dea11b68
+  url: https://files.pythonhosted.org/packages/64/21/e01e0f6effb3a770b4e060ccde09a211ae84e02fe259c483a5bec2ed1632/e3sm_quickview-${{ version }}.tar.gz
+  sha256: c7375a87e42ade0816254d6b4a87ab3c0182dbf21ac6bbc349faa7b3799903a0
 
 build:
   number: 0
@@ -37,11 +37,14 @@ requirements:
     - trame-dataclass >=2.0.2
     - trame-components
     - trame-tauri >=0.6.2
-    - trame-colormaps >=1.5.0
+    - trame-colormaps >=1.7.2
     - pillow
 
 tests:
   - python:
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
       imports:
         - e3sm_quickview
       pip_check: true
